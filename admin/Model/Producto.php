@@ -163,7 +163,7 @@ class Producto
 		return $listaProductos;
 	}
 
-	public static function searchById($IDproducto){
+	public static function searchById($idproducto){
 		$db=Db::getConnect();
 		$select=$db->prepare('SELECT * FROM producto WHERE idproducto=:idproducto');
 		$select->bindValue('idproducto',$idproducto);
@@ -183,7 +183,7 @@ class Producto
 	public static function update($producto){
 		$db=Db::getConnect();
 		$update=$db->prepare('UPDATE producto SET idcategoria=:idcategoria,titulop=:titulop,fichap=:fichap, resenap=:resenap, imagen1p=:imagen1p,
-		 imagen2p=:imagen2p, imagen3p=:imagen3p, imagen4p=:imagen4p, videop=:videop, enlacep=:enlacep WHERE IDproducto=:IDproducto');
+		 imagen2p=:imagen2p, imagen3p=:imagen3p, imagen4p=:imagen4p, videop=:videop, enlacep=:enlacep WHERE idproducto=:idproducto');
 		$update->bindValue('idcategoria', $producto->getIdcategoria());
 		$update->bindValue('titulop', $producto->getTitulop());
 		$update->bindValue('fichap', $producto->getFichap());
@@ -194,7 +194,7 @@ class Producto
 		$update->bindValue('imagen4p',$producto->getImagen4p());
 		$update->bindValue('videop',$producto->getVideop());
 		$update->bindValue('enlacep',$producto->getEnlacep());
-		$update->bindValue('IDproducto',$producto->getIDproducto());
+		$update->bindValue('idproducto',$producto->getIdproducto());
 		$update->execute();
 	}
 

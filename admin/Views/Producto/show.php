@@ -25,9 +25,8 @@
 					<th>Id</th>
 					<th>IDcategoria</th>
 					<th>Titulo</th>
-					<th>Ficha</th>
-					<th>Reseña</th>
-					<th>Imagen1</th>
+					
+					<th>Portada</th>
 					<th>Imagen2</th>
 					<th>Imagen3</th>
 					<th>Imagen4</th>
@@ -37,18 +36,16 @@
 				</tr>
 				<tbody>
 					<?php foreach ($listaProductos as$producto) {?>
-
 					
 					<tr>
 						<td><?php echo $producto->getIdproducto(); ?> </td>
 						<td><?php echo $producto->getIdcategoria(); ?> </td>
 						<td><?php echo $producto->getTitulop(); ?> </td>
-						<td><?php echo $producto->getFichap(); ?></td>
-						<td><?php echo $producto->getResenap(); ?></td>
-						<td><?php echo $producto->getImagen1p(); ?></td>
-						<td><?php echo $producto->getImagen2p(); ?></td>
-						<td><?php echo $producto->getImagen3p(); ?></td>
-						<td><?php echo $producto->getImagen4p(); ?></td>
+						
+						<td><img src="<?php echo $producto->getImagen1p(); ?>" style="width: 50px; height: 50px;" alt=""></td>
+						<td><img src="<?php echo $producto->getImagen2p(); ?>" style="width: 50px; height: 50px;" alt=""></td>
+						<td><img src="<?php echo $producto->getImagen3p(); ?>" style="width: 50px; height: 50px;" alt=""></td>
+						<td><img src="<?php echo $producto->getImagen4p(); ?>" style="width: 50px; height: 50px;" alt=""></td>
 						<td><?php echo $producto->getVideop(); ?></td>
 						<td><?php echo $producto->getEnlacep(); ?></td>
 						<td>

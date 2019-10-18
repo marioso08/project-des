@@ -86,7 +86,7 @@ $fila1=$filas[0];
   <div class="descri">
         <h3><?php echo $fila1->titulop ?></h3>
   <p><?php echo $fila1->resenap ?></p>
-  </div>
+  </div><br><br><br><br>
   <div class="imagenes">
      <h2>Imagenes</h2><br>
       <img id="img2" src="<?php echo $fila1->imagen2p ?>" alt="">

@@ -1,3 +1,8 @@
+<?php 
+$db=Db::getConnect();
+$filas=$db->prepare("SELECT idcategoria,nombre FROM `categoria`");
+$filas->execute();
+?>
 
 <div class="row">
 <div class="col-lg-12">
@@ -10,8 +15,14 @@
   <form role="form" action="?controller=producto&&action=save" method="POST">
 
     <div class="form-group">
+ 
       <label for="text">Categoria:</label>
-      <input type="text" class="form-control" id="categoria" name="idcategoria">
+      <select class="form-control" name="idcategoria">
+      <?php foreach($filas as $r1){
+       echo "<option value=".$r1[0].">" .$r1[1]."</option>";
+      }?>
+      </select>
+     
     </div>
     <div class="form-group">
       <label for="text">Titulo:</label>
@@ -19,12 +30,11 @@
     </div>
     <div class="form-group">
       <label for="text">Ficha:</label>
-      <input type="text" class="form-control" id="nombres" placeholder="Ingrese Ficha" name="fichap">
+      <textarea id="summernote1" class="form-control" type="text" name="fichap"></textarea>
     </div>
-    
     <div class="form-group">
       <label for="text">Reseña:</label>
-      <input type="text" name="resenap" class="form-control" placeholder="Ingrese reseña">
+      <textarea id="summernote2" class="form-control" type="text" name="resenap"></textarea>
     </div>
     <div class="form-group">
       <label for="text">Portada:</label>
@@ -48,7 +58,7 @@
     </div>
     <div class="form-group">
       <label for="text">Enlace:</label>
-      <input type="text" name="enlacep" class="form-control" placeholder="Ingrese Enlaces">
+      <textarea id="summernote3" class="form-control" type="text" name="enlacep"></textarea>
     </div>
     
     <button type="submit" class="btn btn-primary">Guardar</button>

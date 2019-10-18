@@ -37,13 +37,13 @@ class UsuarioController
 	}
 
 	function updateshow(){
-		$idp=$_GET['idp'];
-		$producto=Producto::searchById($idp);
+		$idproducto=$_GET['idproducto'];
+		$producto=Producto::searchById($idproducto);
 		require_once('Views/Producto/updateshow.php');
 	}
 
 	function update(){
-		$producto = new Producto($_POST['idproducto'],$_POST['IDcategoria'],$_POST['titulop'],$_POST['fichap'],$_POST['resenap'],$_POST['imagen1p'],$_POST['imagen2p'],$_POST['imagen3p'],$_POST['imagen4p'],$_POST['videop'],$_POST['enlacep']);
+		$producto = new Producto($_POST['idproducto'],$_POST['idcategoria'],$_POST['titulop'],$_POST['fichap'],$_POST['resenap'],$_POST['imagen1p'],$_POST['imagen2p'],$_POST['imagen3p'],$_POST['imagen4p'],$_POST['videop'],$_POST['enlacep']);
 		Producto::update($producto);
 		$this->show();
 	}
