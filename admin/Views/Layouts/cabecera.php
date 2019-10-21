@@ -45,7 +45,7 @@
                         <ul class="nav" id="side-menu">
                             
                             <li>
-                                <a href="/contable"><i class="fa fa-dashboard fa-fw"></i> Home</a>
+                                <a href="index.php"><i class="fa fa-dashboard fa-fw"></i> Home</a>
                             </li>
                             <li>
                                 <a href="#"><i class="fa fa-archive fa-fw"></i> Inventario<span class="fa arrow"></span></a>

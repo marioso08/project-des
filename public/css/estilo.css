@@ -1,0 +1,29 @@
+
+.well{
+	display:none;
+  position:absolute;
+	 z-index:20;
+	 
+}
+
+@media screen and (min-width: 480px) {
+  .well {
+    	 left:45%;
+    	 top:120px;        
+  }
+    #search_area{
+        height:400px; 
+        width: 600px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+  .well {
+   
+     left:75%;
+    top:20%;
+    position:absolute;
+  }
+}
+
+
