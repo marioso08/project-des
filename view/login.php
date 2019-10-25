@@ -1,6 +1,4 @@
 
-
-
 <div class="modal fade login" id="loginModal">
 		      <div class="modal-dialog login animated">
     		      <div class="modal-content">

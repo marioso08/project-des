@@ -10,12 +10,16 @@
 <?php include 'view/login.php'; ?>
 <?php include 'view/config.php'; ?>
 <?php include 'conexion/n.php'; ?>
+<script src="https://kit.fontawesome.com/81ff6c4bdb.js" crossorigin="anonymous"></script>
 <div id="top-header" class="col-md-12">
 
-                                 
+                    <ul class="header-links pull-left">
+                      <li><a href="#"><i class="fas fa-film"></i>Peliculas</a></li>
+                      <li><a href="#"><i class="fas fa-gamepad"></i>Juegos</a></li>
+                    </ul>
                     <ul class="header-links pull-right">
                         <div class="row ">
-                        <?php
+                                        <?php
                                             if(!$_SESSION['nombreAdmin']==""){
                                                 echo ' 
                                                 <div class="contenedor-tr">
@@ -64,6 +68,7 @@
                                         ?>
                               </div>
                           </ul>
+                          
                       </div>
                  
 
